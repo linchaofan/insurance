@@ -1,5 +1,6 @@
 package org.lcf.ins.service;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,10 @@ import org.lcf.ins.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 @Service
 public class SearchService {
 	
@@ -16,8 +21,11 @@ public class SearchService {
 	ProductMapper productMapper;
 	
 	@SuppressWarnings("unchecked")
-	public ResultDTO<List<Product>> searchProduct(String productName,String productType){
+	public ResultDTO<List<Product>> searchProduct(String name,String type) throws JsonParseException, JsonMappingException, IOException{
 		ResultDTO<List<Product>> result = ResultDTO.newSuccess();
+		ObjectMapper mapper = new ObjectMapper();
+		String productName = mapper.readValue(name, String.class);
+		String productType = mapper.readValue(type, String.class);
 		List<Product> list = new ArrayList<>();
 		String typeCode = null;
 		if(productType.equals("医疗")){

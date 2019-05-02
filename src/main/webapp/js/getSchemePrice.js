@@ -161,4 +161,3 @@ getPrice = function (code){
         }
 	});
 };
-

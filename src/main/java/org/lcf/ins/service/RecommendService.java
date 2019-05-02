@@ -53,7 +53,7 @@ public class RecommendService {
 			if (!u2.username.equals(userName)) {
 				double distance = person_dis(u2.list, u1.list);
 				if (distance == 0) {
-					break;
+					continue;
 				}
 				Iterator it = distances.keySet().iterator();
 				while (it.hasNext()) {
@@ -86,9 +86,9 @@ public class RecommendService {
 				distance = distance + 1;
 			}
 		}
-		if (distance == 0) {
-			return null;
-		}
+//		if (distance == 0) {
+//			return null;
+//		}
 		return distance;
 	}
 

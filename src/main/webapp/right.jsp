@@ -8,18 +8,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="js/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style1.css" />
 </head>
 <body>
 <br>
 <div align="center">
 <p style="color:blue;font-size:20px">欢迎来到保险服务系统！</p><br>
-<form action="search.action" method="post">
-<p>商品名称:<input type="text" name="productName">&nbsp;&nbsp;---商品类型:<input type="text" name="productType">
+<p>商品名称:<input type="text" id="productName" name="productName">
+&nbsp;&nbsp;---商品类型:
+<select id="type">
+	<option value="0">请选择</option>
+	<option value="医疗">医疗保险</option>
+	<option value="人寿">人寿保险</option>
+	<option value="意外">意外保险</option>
+	<option value="旅游">旅游保险</option>	
+</select>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<input type="submit" value="搜索" id="search">&nbsp;<input type="reset" value="重置">
+<button id="search" onclick="goSearch();">搜索</button>&nbsp;<input type="reset" value="重置">
 </p>
-</form>
 </div>
 <br><br>
 <c:if test="${products!=null }">
@@ -70,6 +77,25 @@
 </div>
 </div>
 </c:if>
+<script>
+function goSearch(){
+	var productName = $("#productName").val();
+	var index1 = document.getElementById("type").selectedIndex;
+	var productType = document.getElementById("type").options[index1].value;
+	$.ajax({
+	async: false,
+	        url: "search.action",
+	        type: "post",
+	        data:{"productName":JSON.stringify(productName),"productType":JSON.stringify(productType)},
+	        success: function (msg) {
+	        window.location.href="right.jsp";
+	        },
+	        error: function (msg) {
+	        window.location.href="right.jsp";
+	        }
+	});
+	}
+</script>
 </body>
 </html>
 

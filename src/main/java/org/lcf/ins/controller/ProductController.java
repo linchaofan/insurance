@@ -137,7 +137,9 @@ public class ProductController {
 	
 	//搜索商品
 	@RequestMapping(value = "/search")
-	public String search(Model model,String productName,String productType,HttpSession session){
+	public String search(Model model,String productName,String productType,HttpSession session) throws JsonParseException, JsonMappingException, IOException{
+		session.removeAttribute("productCodes");
+		session.removeAttribute("products");
 		ResultDTO<List<Product>> result = searchService.searchProduct(productName, productType);
 		if(result.getStatus()!=ErrorEnum.success.getErrorCode()){
 			model.addAttribute("errorMsg", result.getMessage());
@@ -151,6 +153,8 @@ public class ProductController {
 	//为您推荐
 	@RequestMapping(value = "/recommend")
 	public String recommend(Model model,String userPhone,Integer userId,HttpSession session){
+		session.removeAttribute("productCodes");
+		session.removeAttribute("products");
 		session.removeAttribute("searchProducts");
 		ResultDTO<List<OrderInfo>> orderResult = orderService.selectOrderByHolderId(userId);
 		if(orderResult.getStatus()!=ErrorEnum.success.getErrorCode()){
