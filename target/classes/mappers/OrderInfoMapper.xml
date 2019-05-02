@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.lcf.ins.dao.OrderInfoMapper">
+  <resultMap id="BaseResultMap" type="org.lcf.ins.entity.OrderInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="link_no" jdbcType="VARCHAR" property="linkNo" />
+    <result column="proposal_no" jdbcType="VARCHAR" property="proposalNo" />
+    <result column="policy_no" jdbcType="VARCHAR" property="policyNo" />
+    <result column="holder_id" jdbcType="INTEGER" property="holderId" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="product_code" jdbcType="VARCHAR" property="productCode" />
+    <result column="total_amount" jdbcType="BIGINT" property="totalAmount" />
+    <result column="total_price" jdbcType="BIGINT" property="totalPrice" />
+    <result column="policy_num" jdbcType="INTEGER" property="policyNum" />
+    <result column="begin_date" jdbcType="TIMESTAMP" property="beginDate" />
+    <result column="end_date" jdbcType="TIMESTAMP" property="endDate" />
+    <result column="check_status" jdbcType="INTEGER" property="checkStatus" />
+    <result column="scheme_id" jdbcType="INTEGER" property="schemeId" />
+    <result column="policy_url" jdbcType="VARCHAR" property="policyUrl" />
+    <result column="sys_flag" jdbcType="INTEGER" property="sysFlag" />
+    <result column="edite_time" jdbcType="TIMESTAMP" property="editeTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="order_type" jdbcType="INTEGER" property="orderType" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="is_cancel" jdbcType="INTEGER" property="isCancel" />
+    <result column="cancel_time" jdbcType="TIMESTAMP" property="cancelTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, link_no, proposal_no, policy_no, holder_id, product_id, product_name, product_code, 
+    total_amount, total_price, policy_num, begin_date, end_date, check_status, scheme_id, 
+    policy_url, sys_flag, edite_time, create_time, order_type, note, is_cancel, cancel_time
+  </sql>
+  <select id="selectByExample" parameterType="org.lcf.ins.entity.OrderInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from order_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from order_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from order_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="org.lcf.ins.entity.OrderInfoExample">
+    delete from order_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.lcf.ins.entity.OrderInfo">
+    insert into order_info (id, link_no, proposal_no, 
+      policy_no, holder_id, product_id, 
+      product_name, product_code, total_amount, 
+      total_price, policy_num, begin_date, 
+      end_date, check_status, scheme_id, 
+      policy_url, sys_flag, edite_time, 
+      create_time, order_type, note, 
+      is_cancel, cancel_time)
+    values (#{id,jdbcType=INTEGER}, #{linkNo,jdbcType=VARCHAR}, #{proposalNo,jdbcType=VARCHAR}, 
+      #{policyNo,jdbcType=VARCHAR}, #{holderId,jdbcType=INTEGER}, #{productId,jdbcType=INTEGER}, 
+      #{productName,jdbcType=VARCHAR}, #{productCode,jdbcType=VARCHAR}, #{totalAmount,jdbcType=BIGINT}, 
+      #{totalPrice,jdbcType=BIGINT}, #{policyNum,jdbcType=INTEGER}, #{beginDate,jdbcType=TIMESTAMP}, 
+      #{endDate,jdbcType=TIMESTAMP}, #{checkStatus,jdbcType=INTEGER}, #{schemeId,jdbcType=INTEGER}, 
+      #{policyUrl,jdbcType=VARCHAR}, #{sysFlag,jdbcType=INTEGER}, #{editeTime,jdbcType=TIMESTAMP}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{orderType,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, 
+      #{isCancel,jdbcType=INTEGER}, #{cancelTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.lcf.ins.entity.OrderInfo">
+    insert into order_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="linkNo != null">
+        link_no,
+      </if>
+      <if test="proposalNo != null">
+        proposal_no,
+      </if>
+      <if test="policyNo != null">
+        policy_no,
+      </if>
+      <if test="holderId != null">
+        holder_id,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="productName != null">
+        product_name,
+      </if>
+      <if test="productCode != null">
+        product_code,
+      </if>
+      <if test="totalAmount != null">
+        total_amount,
+      </if>
+      <if test="totalPrice != null">
+        total_price,
+      </if>
+      <if test="policyNum != null">
+        policy_num,
+      </if>
+      <if test="beginDate != null">
+        begin_date,
+      </if>
+      <if test="endDate != null">
+        end_date,
+      </if>
+      <if test="checkStatus != null">
+        check_status,
+      </if>
+      <if test="schemeId != null">
+        scheme_id,
+      </if>
+      <if test="policyUrl != null">
+        policy_url,
+      </if>
+      <if test="sysFlag != null">
+        sys_flag,
+      </if>
+      <if test="editeTime != null">
+        edite_time,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="orderType != null">
+        order_type,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="isCancel != null">
+        is_cancel,
+      </if>
+      <if test="cancelTime != null">
+        cancel_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="linkNo != null">
+        #{linkNo,jdbcType=VARCHAR},
+      </if>
+      <if test="proposalNo != null">
+        #{proposalNo,jdbcType=VARCHAR},
+      </if>
+      <if test="policyNo != null">
+        #{policyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="holderId != null">
+        #{holderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="productCode != null">
+        #{productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="totalAmount != null">
+        #{totalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="totalPrice != null">
+        #{totalPrice,jdbcType=BIGINT},
+      </if>
+      <if test="policyNum != null">
+        #{policyNum,jdbcType=INTEGER},
+      </if>
+      <if test="beginDate != null">
+        #{beginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endDate != null">
+        #{endDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkStatus != null">
+        #{checkStatus,jdbcType=INTEGER},
+      </if>
+      <if test="schemeId != null">
+        #{schemeId,jdbcType=INTEGER},
+      </if>
+      <if test="policyUrl != null">
+        #{policyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlag != null">
+        #{sysFlag,jdbcType=INTEGER},
+      </if>
+      <if test="editeTime != null">
+        #{editeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orderType != null">
+        #{orderType,jdbcType=INTEGER},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="isCancel != null">
+        #{isCancel,jdbcType=INTEGER},
+      </if>
+      <if test="cancelTime != null">
+        #{cancelTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.lcf.ins.entity.OrderInfoExample" resultType="java.lang.Long">
+    select count(*) from order_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update order_info
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.linkNo != null">
+        link_no = #{record.linkNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.proposalNo != null">
+        proposal_no = #{record.proposalNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.policyNo != null">
+        policy_no = #{record.policyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.holderId != null">
+        holder_id = #{record.holderId,jdbcType=INTEGER},
+      </if>
+      <if test="record.productId != null">
+        product_id = #{record.productId,jdbcType=INTEGER},
+      </if>
+      <if test="record.productName != null">
+        product_name = #{record.productName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productCode != null">
+        product_code = #{record.productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.totalAmount != null">
+        total_amount = #{record.totalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="record.totalPrice != null">
+        total_price = #{record.totalPrice,jdbcType=BIGINT},
+      </if>
+      <if test="record.policyNum != null">
+        policy_num = #{record.policyNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.beginDate != null">
+        begin_date = #{record.beginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.endDate != null">
+        end_date = #{record.endDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.checkStatus != null">
+        check_status = #{record.checkStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.schemeId != null">
+        scheme_id = #{record.schemeId,jdbcType=INTEGER},
+      </if>
+      <if test="record.policyUrl != null">
+        policy_url = #{record.policyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysFlag != null">
+        sys_flag = #{record.sysFlag,jdbcType=INTEGER},
+      </if>
+      <if test="record.editeTime != null">
+        edite_time = #{record.editeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.orderType != null">
+        order_type = #{record.orderType,jdbcType=INTEGER},
+      </if>
+      <if test="record.note != null">
+        note = #{record.note,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isCancel != null">
+        is_cancel = #{record.isCancel,jdbcType=INTEGER},
+      </if>
+      <if test="record.cancelTime != null">
+        cancel_time = #{record.cancelTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update order_info
+    set id = #{record.id,jdbcType=INTEGER},
+      link_no = #{record.linkNo,jdbcType=VARCHAR},
+      proposal_no = #{record.proposalNo,jdbcType=VARCHAR},
+      policy_no = #{record.policyNo,jdbcType=VARCHAR},
+      holder_id = #{record.holderId,jdbcType=INTEGER},
+      product_id = #{record.productId,jdbcType=INTEGER},
+      product_name = #{record.productName,jdbcType=VARCHAR},
+      product_code = #{record.productCode,jdbcType=VARCHAR},
+      total_amount = #{record.totalAmount,jdbcType=BIGINT},
+      total_price = #{record.totalPrice,jdbcType=BIGINT},
+      policy_num = #{record.policyNum,jdbcType=INTEGER},
+      begin_date = #{record.beginDate,jdbcType=TIMESTAMP},
+      end_date = #{record.endDate,jdbcType=TIMESTAMP},
+      check_status = #{record.checkStatus,jdbcType=INTEGER},
+      scheme_id = #{record.schemeId,jdbcType=INTEGER},
+      policy_url = #{record.policyUrl,jdbcType=VARCHAR},
+      sys_flag = #{record.sysFlag,jdbcType=INTEGER},
+      edite_time = #{record.editeTime,jdbcType=TIMESTAMP},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      order_type = #{record.orderType,jdbcType=INTEGER},
+      note = #{record.note,jdbcType=VARCHAR},
+      is_cancel = #{record.isCancel,jdbcType=INTEGER},
+      cancel_time = #{record.cancelTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lcf.ins.entity.OrderInfo">
+    update order_info
+    <set>
+      <if test="linkNo != null">
+        link_no = #{linkNo,jdbcType=VARCHAR},
+      </if>
+      <if test="proposalNo != null">
+        proposal_no = #{proposalNo,jdbcType=VARCHAR},
+      </if>
+      <if test="policyNo != null">
+        policy_no = #{policyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="holderId != null">
+        holder_id = #{holderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="productCode != null">
+        product_code = #{productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="totalAmount != null">
+        total_amount = #{totalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="totalPrice != null">
+        total_price = #{totalPrice,jdbcType=BIGINT},
+      </if>
+      <if test="policyNum != null">
+        policy_num = #{policyNum,jdbcType=INTEGER},
+      </if>
+      <if test="beginDate != null">
+        begin_date = #{beginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endDate != null">
+        end_date = #{endDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkStatus != null">
+        check_status = #{checkStatus,jdbcType=INTEGER},
+      </if>
+      <if test="schemeId != null">
+        scheme_id = #{schemeId,jdbcType=INTEGER},
+      </if>
+      <if test="policyUrl != null">
+        policy_url = #{policyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlag != null">
+        sys_flag = #{sysFlag,jdbcType=INTEGER},
+      </if>
+      <if test="editeTime != null">
+        edite_time = #{editeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orderType != null">
+        order_type = #{orderType,jdbcType=INTEGER},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="isCancel != null">
+        is_cancel = #{isCancel,jdbcType=INTEGER},
+      </if>
+      <if test="cancelTime != null">
+        cancel_time = #{cancelTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lcf.ins.entity.OrderInfo">
+    update order_info
+    set link_no = #{linkNo,jdbcType=VARCHAR},
+      proposal_no = #{proposalNo,jdbcType=VARCHAR},
+      policy_no = #{policyNo,jdbcType=VARCHAR},
+      holder_id = #{holderId,jdbcType=INTEGER},
+      product_id = #{productId,jdbcType=INTEGER},
+      product_name = #{productName,jdbcType=VARCHAR},
+      product_code = #{productCode,jdbcType=VARCHAR},
+      total_amount = #{totalAmount,jdbcType=BIGINT},
+      total_price = #{totalPrice,jdbcType=BIGINT},
+      policy_num = #{policyNum,jdbcType=INTEGER},
+      begin_date = #{beginDate,jdbcType=TIMESTAMP},
+      end_date = #{endDate,jdbcType=TIMESTAMP},
+      check_status = #{checkStatus,jdbcType=INTEGER},
+      scheme_id = #{schemeId,jdbcType=INTEGER},
+      policy_url = #{policyUrl,jdbcType=VARCHAR},
+      sys_flag = #{sysFlag,jdbcType=INTEGER},
+      edite_time = #{editeTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      order_type = #{orderType,jdbcType=INTEGER},
+      note = #{note,jdbcType=VARCHAR},
+      is_cancel = #{isCancel,jdbcType=INTEGER},
+      cancel_time = #{cancelTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
