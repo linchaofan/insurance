@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.lcf.ins.dao.ProductMapper">
+	<resultMap id="BaseResultMap" type="org.lcf.ins.entity.Product">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="code" jdbcType="VARCHAR" property="code" />
+		<result column="name" jdbcType="VARCHAR" property="name" />
+		<result column="seller_id" jdbcType="INTEGER" property="sellerId" />
+		<result column="type_code" jdbcType="VARCHAR" property="typeCode" />
+		<result column="title" jdbcType="VARCHAR" property="title" />
+		<result column="short_title" jdbcType="VARCHAR" property="shortTitle" />
+		<result column="imgPath" jdbcType="VARCHAR" property="imgpath" />
+		<result column="max_insurant" jdbcType="INTEGER" property="maxInsurant" />
+		<result column="hesitate_day" jdbcType="INTEGER" property="hesitateDay" />
+		<result column="introduce" jdbcType="VARCHAR" property="introduce" />
+		<result column="notice" jdbcType="VARCHAR" property="notice" />
+		<result column="compensation_note" jdbcType="VARCHAR" property="compensationNote" />
+		<result column="question" jdbcType="VARCHAR" property="question" />
+		<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+		<result column="edite_time" jdbcType="TIMESTAMP" property="editeTime" />
+		<result column="sys_flag" jdbcType="INTEGER" property="sysFlag" />
+	</resultMap>
+	<sql id="Example_Where_Clause">
+		<where>
+			<foreach collection="oredCriteria" item="criteria" separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" prefixOverrides="and" suffix=")">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and
+									#{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Update_By_Example_Where_Clause">
+		<where>
+			<foreach collection="example.oredCriteria" item="criteria" separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" prefixOverrides="and" suffix=")">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and
+									#{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Base_Column_List">
+		id, code, name, seller_id, type_code, title, short_title, imgPath,
+		max_insurant,
+		hesitate_day, introduce, notice, compensation_note, question, create_time,
+		edite_time,
+		sys_flag
+	</sql>
+	<select id="selectByExample" parameterType="org.lcf.ins.entity.ProductExample" resultMap="BaseResultMap">
+		select
+		<if test="distinct">
+			distinct
+		</if>
+		'true' as QUERYID,
+		<include refid="Base_Column_List" />
+		from product
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+		<if test="orderByClause != null">
+			order by ${orderByClause}
+		</if>
+	</select>
+	<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from product
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	<select id="selectByNameAndType" resultMap="BaseResultMap">
+		<bind name="pattern1" value="'%' + _parameter.name + '%'" />
+		<bind name="pattern2" value="'%' + _parameter.typeCode + '%'" />
+		select
+		<include refid="Base_Column_List" />
+		from product
+		where name LIKE #{pattern1} and type_code LIKE #{pattern2}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from product
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+	<delete id="deleteByExample" parameterType="org.lcf.ins.entity.ProductExample">
+		delete from product
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</delete>
+	<insert id="insert" parameterType="org.lcf.ins.entity.Product">
+		insert into product (id, code, name,
+		seller_id, type_code, title,
+		short_title, imgPath, max_insurant,
+		hesitate_day, introduce, notice,
+		compensation_note, question, create_time,
+		edite_time, sys_flag)
+		values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR},
+		#{name,jdbcType=VARCHAR},
+		#{sellerId,jdbcType=INTEGER}, #{typeCode,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR},
+		#{shortTitle,jdbcType=VARCHAR}, #{imgpath,jdbcType=VARCHAR},
+		#{maxInsurant,jdbcType=INTEGER},
+		#{hesitateDay,jdbcType=INTEGER}, #{introduce,jdbcType=VARCHAR}, #{notice,jdbcType=VARCHAR},
+		#{compensationNote,jdbcType=VARCHAR}, #{question,jdbcType=VARCHAR},
+		#{createTime,jdbcType=TIMESTAMP},
+		#{editeTime,jdbcType=TIMESTAMP}, #{sysFlag,jdbcType=INTEGER})
+	</insert>
+	<insert id="insertSelective" parameterType="org.lcf.ins.entity.Product">
+		insert into product
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="code != null">
+				code,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="sellerId != null">
+				seller_id,
+			</if>
+			<if test="typeCode != null">
+				type_code,
+			</if>
+			<if test="title != null">
+				title,
+			</if>
+			<if test="shortTitle != null">
+				short_title,
+			</if>
+			<if test="imgpath != null">
+				imgPath,
+			</if>
+			<if test="maxInsurant != null">
+				max_insurant,
+			</if>
+			<if test="hesitateDay != null">
+				hesitate_day,
+			</if>
+			<if test="introduce != null">
+				introduce,
+			</if>
+			<if test="notice != null">
+				notice,
+			</if>
+			<if test="compensationNote != null">
+				compensation_note,
+			</if>
+			<if test="question != null">
+				question,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editeTime != null">
+				edite_time,
+			</if>
+			<if test="sysFlag != null">
+				sys_flag,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="code != null">
+				#{code,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				#{name,jdbcType=VARCHAR},
+			</if>
+			<if test="sellerId != null">
+				#{sellerId,jdbcType=INTEGER},
+			</if>
+			<if test="typeCode != null">
+				#{typeCode,jdbcType=VARCHAR},
+			</if>
+			<if test="title != null">
+				#{title,jdbcType=VARCHAR},
+			</if>
+			<if test="shortTitle != null">
+				#{shortTitle,jdbcType=VARCHAR},
+			</if>
+			<if test="imgpath != null">
+				#{imgpath,jdbcType=VARCHAR},
+			</if>
+			<if test="maxInsurant != null">
+				#{maxInsurant,jdbcType=INTEGER},
+			</if>
+			<if test="hesitateDay != null">
+				#{hesitateDay,jdbcType=INTEGER},
+			</if>
+			<if test="introduce != null">
+				#{introduce,jdbcType=VARCHAR},
+			</if>
+			<if test="notice != null">
+				#{notice,jdbcType=VARCHAR},
+			</if>
+			<if test="compensationNote != null">
+				#{compensationNote,jdbcType=VARCHAR},
+			</if>
+			<if test="question != null">
+				#{question,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="editeTime != null">
+				#{editeTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysFlag != null">
+				#{sysFlag,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+	<select id="countByExample" parameterType="org.lcf.ins.entity.ProductExample" resultType="java.lang.Long">
+		select count(*) from product
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</select>
+	<update id="updateByExampleSelective" parameterType="map">
+		update product
+		<set>
+			<if test="record.id != null">
+				id = #{record.id,jdbcType=INTEGER},
+			</if>
+			<if test="record.code != null">
+				code = #{record.code,jdbcType=VARCHAR},
+			</if>
+			<if test="record.name != null">
+				name = #{record.name,jdbcType=VARCHAR},
+			</if>
+			<if test="record.sellerId != null">
+				seller_id = #{record.sellerId,jdbcType=INTEGER},
+			</if>
+			<if test="record.typeCode != null">
+				type_code = #{record.typeCode,jdbcType=VARCHAR},
+			</if>
+			<if test="record.title != null">
+				title = #{record.title,jdbcType=VARCHAR},
+			</if>
+			<if test="record.shortTitle != null">
+				short_title = #{record.shortTitle,jdbcType=VARCHAR},
+			</if>
+			<if test="record.imgpath != null">
+				imgPath = #{record.imgpath,jdbcType=VARCHAR},
+			</if>
+			<if test="record.maxInsurant != null">
+				max_insurant = #{record.maxInsurant,jdbcType=INTEGER},
+			</if>
+			<if test="record.hesitateDay != null">
+				hesitate_day = #{record.hesitateDay,jdbcType=INTEGER},
+			</if>
+			<if test="record.introduce != null">
+				introduce = #{record.introduce,jdbcType=VARCHAR},
+			</if>
+			<if test="record.notice != null">
+				notice = #{record.notice,jdbcType=VARCHAR},
+			</if>
+			<if test="record.compensationNote != null">
+				compensation_note = #{record.compensationNote,jdbcType=VARCHAR},
+			</if>
+			<if test="record.question != null">
+				question = #{record.question,jdbcType=VARCHAR},
+			</if>
+			<if test="record.createTime != null">
+				create_time = #{record.createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="record.editeTime != null">
+				edite_time = #{record.editeTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="record.sysFlag != null">
+				sys_flag = #{record.sysFlag,jdbcType=INTEGER},
+			</if>
+		</set>
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByExample" parameterType="map">
+		update product
+		set id = #{record.id,jdbcType=INTEGER},
+		code = #{record.code,jdbcType=VARCHAR},
+		name = #{record.name,jdbcType=VARCHAR},
+		seller_id = #{record.sellerId,jdbcType=INTEGER},
+		type_code = #{record.typeCode,jdbcType=VARCHAR},
+		title = #{record.title,jdbcType=VARCHAR},
+		short_title = #{record.shortTitle,jdbcType=VARCHAR},
+		imgPath = #{record.imgpath,jdbcType=VARCHAR},
+		max_insurant = #{record.maxInsurant,jdbcType=INTEGER},
+		hesitate_day = #{record.hesitateDay,jdbcType=INTEGER},
+		introduce = #{record.introduce,jdbcType=VARCHAR},
+		notice = #{record.notice,jdbcType=VARCHAR},
+		compensation_note = #{record.compensationNote,jdbcType=VARCHAR},
+		question = #{record.question,jdbcType=VARCHAR},
+		create_time = #{record.createTime,jdbcType=TIMESTAMP},
+		edite_time = #{record.editeTime,jdbcType=TIMESTAMP},
+		sys_flag = #{record.sysFlag,jdbcType=INTEGER}
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByPrimaryKeySelective" parameterType="org.lcf.ins.entity.Product">
+		update product
+		<set>
+			<if test="code != null">
+				code = #{code,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				name = #{name,jdbcType=VARCHAR},
+			</if>
+			<if test="sellerId != null">
+				seller_id = #{sellerId,jdbcType=INTEGER},
+			</if>
+			<if test="typeCode != null">
+				type_code = #{typeCode,jdbcType=VARCHAR},
+			</if>
+			<if test="title != null">
+				title = #{title,jdbcType=VARCHAR},
+			</if>
+			<if test="shortTitle != null">
+				short_title = #{shortTitle,jdbcType=VARCHAR},
+			</if>
+			<if test="imgpath != null">
+				imgPath = #{imgpath,jdbcType=VARCHAR},
+			</if>
+			<if test="maxInsurant != null">
+				max_insurant = #{maxInsurant,jdbcType=INTEGER},
+			</if>
+			<if test="hesitateDay != null">
+				hesitate_day = #{hesitateDay,jdbcType=INTEGER},
+			</if>
+			<if test="introduce != null">
+				introduce = #{introduce,jdbcType=VARCHAR},
+			</if>
+			<if test="notice != null">
+				notice = #{notice,jdbcType=VARCHAR},
+			</if>
+			<if test="compensationNote != null">
+				compensation_note = #{compensationNote,jdbcType=VARCHAR},
+			</if>
+			<if test="question != null">
+				question = #{question,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="editeTime != null">
+				edite_time = #{editeTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysFlag != null">
+				sys_flag = #{sysFlag,jdbcType=INTEGER},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="org.lcf.ins.entity.Product">
+		update product
+		set code = #{code,jdbcType=VARCHAR},
+		name = #{name,jdbcType=VARCHAR},
+		seller_id = #{sellerId,jdbcType=INTEGER},
+		type_code = #{typeCode,jdbcType=VARCHAR},
+		title = #{title,jdbcType=VARCHAR},
+		short_title = #{shortTitle,jdbcType=VARCHAR},
+		imgPath = #{imgpath,jdbcType=VARCHAR},
+		max_insurant = #{maxInsurant,jdbcType=INTEGER},
+		hesitate_day = #{hesitateDay,jdbcType=INTEGER},
+		introduce = #{introduce,jdbcType=VARCHAR},
+		notice = #{notice,jdbcType=VARCHAR},
+		compensation_note = #{compensationNote,jdbcType=VARCHAR},
+		question = #{question,jdbcType=VARCHAR},
+		create_time = #{createTime,jdbcType=TIMESTAMP},
+		edite_time = #{editeTime,jdbcType=TIMESTAMP},
+		sys_flag = #{sysFlag,jdbcType=INTEGER}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

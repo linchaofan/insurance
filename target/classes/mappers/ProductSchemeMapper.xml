@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.lcf.ins.dao.ProductSchemeMapper">
+  <resultMap id="BaseResultMap" type="org.lcf.ins.entity.ProductScheme">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="product_code" jdbcType="VARCHAR" property="productCode" />
+    <result column="age_range" jdbcType="VARCHAR" property="ageRange" />
+    <result column="coverage" jdbcType="VARCHAR" property="coverage" />
+    <result column="has_social" jdbcType="VARCHAR" property="hasSocial" />
+    <result column="deadline" jdbcType="VARCHAR" property="deadline" />
+    <result column="price" jdbcType="BIGINT" property="price" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, product_code, age_range, coverage, has_social, deadline, price
+  </sql>
+  <select id="selectByExample" parameterType="org.lcf.ins.entity.ProductSchemeExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from product_scheme
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from product_scheme
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from product_scheme
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="org.lcf.ins.entity.ProductSchemeExample">
+    delete from product_scheme
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.lcf.ins.entity.ProductScheme">
+    insert into product_scheme (id, product_code, age_range, 
+      coverage, has_social, deadline, 
+      price)
+    values (#{id,jdbcType=INTEGER}, #{productCode,jdbcType=VARCHAR}, #{ageRange,jdbcType=VARCHAR}, 
+      #{coverage,jdbcType=VARCHAR}, #{hasSocial,jdbcType=VARCHAR}, #{deadline,jdbcType=VARCHAR}, 
+      #{price,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="org.lcf.ins.entity.ProductScheme">
+    insert into product_scheme
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="productCode != null">
+        product_code,
+      </if>
+      <if test="ageRange != null">
+        age_range,
+      </if>
+      <if test="coverage != null">
+        coverage,
+      </if>
+      <if test="hasSocial != null">
+        has_social,
+      </if>
+      <if test="deadline != null">
+        deadline,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="productCode != null">
+        #{productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="ageRange != null">
+        #{ageRange,jdbcType=VARCHAR},
+      </if>
+      <if test="coverage != null">
+        #{coverage,jdbcType=VARCHAR},
+      </if>
+      <if test="hasSocial != null">
+        #{hasSocial,jdbcType=VARCHAR},
+      </if>
+      <if test="deadline != null">
+        #{deadline,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.lcf.ins.entity.ProductSchemeExample" resultType="java.lang.Long">
+    select count(*) from product_scheme
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update product_scheme
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.productCode != null">
+        product_code = #{record.productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ageRange != null">
+        age_range = #{record.ageRange,jdbcType=VARCHAR},
+      </if>
+      <if test="record.coverage != null">
+        coverage = #{record.coverage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hasSocial != null">
+        has_social = #{record.hasSocial,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deadline != null">
+        deadline = #{record.deadline,jdbcType=VARCHAR},
+      </if>
+      <if test="record.price != null">
+        price = #{record.price,jdbcType=BIGINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update product_scheme
+    set id = #{record.id,jdbcType=INTEGER},
+      product_code = #{record.productCode,jdbcType=VARCHAR},
+      age_range = #{record.ageRange,jdbcType=VARCHAR},
+      coverage = #{record.coverage,jdbcType=VARCHAR},
+      has_social = #{record.hasSocial,jdbcType=VARCHAR},
+      deadline = #{record.deadline,jdbcType=VARCHAR},
+      price = #{record.price,jdbcType=BIGINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lcf.ins.entity.ProductScheme">
+    update product_scheme
+    <set>
+      <if test="productCode != null">
+        product_code = #{productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="ageRange != null">
+        age_range = #{ageRange,jdbcType=VARCHAR},
+      </if>
+      <if test="coverage != null">
+        coverage = #{coverage,jdbcType=VARCHAR},
+      </if>
+      <if test="hasSocial != null">
+        has_social = #{hasSocial,jdbcType=VARCHAR},
+      </if>
+      <if test="deadline != null">
+        deadline = #{deadline,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lcf.ins.entity.ProductScheme">
+    update product_scheme
+    set product_code = #{productCode,jdbcType=VARCHAR},
+      age_range = #{ageRange,jdbcType=VARCHAR},
+      coverage = #{coverage,jdbcType=VARCHAR},
+      has_social = #{hasSocial,jdbcType=VARCHAR},
+      deadline = #{deadline,jdbcType=VARCHAR},
+      price = #{price,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
