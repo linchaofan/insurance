@@ -14,12 +14,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3"/>
 	<meta http-equiv="description" content="This is my page"/>
   </head>
+<<<<<<< HEAD
   	
 	  <frameset rows="*" cols="235,*" framespacing="0" frameborder="no" border="0">
 		    <frame src="<%=path %>/left.jsp" name="leftFrame" scrolling="no" noresize="noresize" id="leftFrame" />
 		    <c:if test="${user==null and seller==null}">
 		    <frame src="right.jsp"  name="rightFrame"/>
 		    </c:if>
+=======
+  
+	  <frameset rows="*" cols="235,*" framespacing="0" frameborder="no" border="0">
+		    <frame src="<%=path %>/left.jsp" name="leftFrame" scrolling="no" noresize="noresize" id="leftFrame" />
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		    <c:if test="${user!=null }">
 			<frame src="recommend.action?userPhone=${user.phone}&userId=${user.id}"  name="rightFrame"/></c:if>
 			<c:if test="${seller!=null }">

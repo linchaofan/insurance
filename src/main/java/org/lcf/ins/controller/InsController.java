@@ -7,6 +7,10 @@ import javax.servlet.http.HttpSession;
 import org.lcf.ins.dto.InsureOrderDTO;
 import org.lcf.ins.dto.ProductDetailDTO;
 import org.lcf.ins.dto.ResultDTO;
+<<<<<<< HEAD
+=======
+import org.lcf.ins.entity.Insured;
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 import org.lcf.ins.entity.OrderInfo;
 import org.lcf.ins.entity.Pay;
 import org.lcf.ins.enums.ErrorEnum;
@@ -43,6 +47,7 @@ public class InsController {
 	
 	@RequestMapping(value = "/getPrice")
 	@ResponseBody
+<<<<<<< HEAD
 	public ResultDTO<String> getPrice(String code,String age,String hasSocial,String coverage,String deadLine,HttpSession session) throws JsonParseException, JsonMappingException, IOException{
 		ResultDTO<String> result = insService.getSchemePrice(code, age, hasSocial, coverage, deadLine);
 		if(result.getStatus()!=ErrorEnum.success.getErrorCode()){
@@ -51,6 +56,13 @@ public class InsController {
 		String schemePrice = result.getData();
 		session.setAttribute("schemePrice", schemePrice);
 		return result;
+=======
+	public String getPrice(String code,String age,String hasSocial,String coverage,String deadLine,HttpSession session) throws JsonParseException, JsonMappingException, IOException{
+		Long price = insService.getSchemePrice(code, age, hasSocial, coverage, deadLine);
+		String schemePrice = price.toString();
+		session.setAttribute("schemePrice", schemePrice);
+		return schemePrice;
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 	}
 	
 	@RequestMapping(value = "/checkOrder")
@@ -85,7 +97,11 @@ public class InsController {
 		ResultDTO<InsureOrderDTO> result = insService.getInsOrderByOrderId(orderId);
 		ResultDTO<OrderInfo> result1 = orderService.selectOrderInfoById(orderId);
 		OrderInfo order = result1.getData();
+<<<<<<< HEAD
 		ResultDTO<ProductDetailDTO> result2 = productService.selectProductDetailByCode(order.getProductCode(),session);
+=======
+		ResultDTO<ProductDetailDTO> result2 = productService.selectProductDetailByCode(order.getProductCode());
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		ProductDetailDTO productDetail = result2.getData();
 		Long schemePrice = order.getTotalPrice();
 		String proposalNo = order.getProposalNo();

@@ -7,6 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+<<<<<<< HEAD
+=======
+import org.lcf.ins.dao.OrderInfoMapper;
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 import org.lcf.ins.dto.ResultDTO;
 import org.lcf.ins.dto.UserSetDTO;
 import org.lcf.ins.entity.OrderInfo;
@@ -42,6 +46,10 @@ public class RecommendService {
 	}
 
 	// 在给定username的情况下，计算其他用户跟它的距离并排序
+<<<<<<< HEAD
+=======
+	@SuppressWarnings("rawtypes")
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 	private Map<Double, String> computeNearestNeighbor(String userName, UserSetDTO set) {
 		Map<Double, String> distances = new TreeMap<>();
 
@@ -53,6 +61,17 @@ public class RecommendService {
 				if (distance == 0) {
 					continue;
 				}
+<<<<<<< HEAD
+=======
+				Iterator it = distances.keySet().iterator();
+				while (it.hasNext()) {
+					Double key = (Double) it.next();
+					if (distance == key.doubleValue()) {
+						distance = distance + 0.5;
+						break;
+					}
+				}
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 				distances.put(distance, u2.username);
 			}
 		}
@@ -76,6 +95,12 @@ public class RecommendService {
 				distance = distance + 1;
 			}
 		}
+<<<<<<< HEAD
+=======
+//		if (distance == 0) {
+//			return null;
+//		}
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		return distance;
 	}
 
@@ -113,9 +138,15 @@ public class RecommendService {
 	public static void main(String[] args) {
 		UserSetDTO userSet = new UserSetDTO();
 		userSet.put("老李").set("haha").set("hehe").set("lyb").create();
+<<<<<<< HEAD
 //		userSet.put("老王").set("haha").set("lyb").set("hehe").set("lcf").set("shw").create();
 		userSet.put("老林").set("haha").set("hehe").set("lyb").set("gjw").create();
 		userSet.put("老周").set("haha").set("hehe").set("lyb").set("st").create();
+=======
+		userSet.put("老王").set("haha").set("lyb").set("hehe").set("lcf").set("shw").create();
+//		userSet.put("老林").set("haha").set("hehe").set("lyb").set("gjw").create();
+//		userSet.put("老周").set("haha").set("hehe").set("lyb").set("st").create();
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		RecommendService recommend = new RecommendService();
 		List<UserSetDTO.Set> recommendations = recommend.recommend("老李", userSet);
 		for (UserSetDTO.Set set : recommendations) {

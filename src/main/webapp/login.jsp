@@ -15,7 +15,10 @@
 				<div class="login_header">
 					<span @click="cur=0" :class="{active:cur==0}">用户登录</span>
 					<span @click="cur=1" :class="{active:cur==1}">承保方登录</span>
+<<<<<<< HEAD
 					<a href="visitorLogin.action" >游客登录</a>
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 				</div>
 				<div class="login_content">
 				<form action="userLogin.action" method="post">

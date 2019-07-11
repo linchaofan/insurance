@@ -25,14 +25,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.RequestMethod;
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
+<<<<<<< HEAD
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
 @Controller
 public class ProductController {
@@ -53,7 +59,10 @@ public class ProductController {
 	//根据sellerId获取产品列表
 	@RequestMapping(value = "/productList")
 	public String getProductList(Model model,Integer sellerId,HttpSession session){
+<<<<<<< HEAD
 		session.removeAttribute("errorMsg");
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		ResultDTO<List<Product>> result = productService.selectProductBySellerId(sellerId);
 		if(result.getStatus()!=ErrorEnum.success.getErrorCode()){
 			model.addAttribute("errorMsg", result.getMessage());
@@ -79,7 +88,11 @@ public class ProductController {
 
 	@RequestMapping(value = "/productDetail")
 	public String getProductDetail(Model model,String productCode,HttpSession session){
+<<<<<<< HEAD
 		ResultDTO<ProductDetailDTO> result = productService.selectProductDetailByCode(productCode,session);
+=======
+		ResultDTO<ProductDetailDTO> result = productService.selectProductDetailByCode(productCode);
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		if(result.getStatus()!=ErrorEnum.success.getErrorCode()){
 			model.addAttribute("errorMsg", result.getMessage());
 			return "errorProductList";
@@ -143,7 +156,10 @@ public class ProductController {
 	//搜索商品
 	@RequestMapping(value = "/search")
 	public String search(Model model,String productName,String productType,HttpSession session) throws JsonParseException, JsonMappingException, IOException{
+<<<<<<< HEAD
 		session.removeAttribute("searchProducts");
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		session.removeAttribute("productCodes");
 		session.removeAttribute("products");
 		ResultDTO<List<Product>> result = searchService.searchProduct(productName, productType);
@@ -177,7 +193,11 @@ public class ProductController {
 		List<ProductDetailDTO> productDetails = new ArrayList<>();
 		List<String> productCodes = new ArrayList<>();
 		for(UserSetDTO.Set set : recommendations){
+<<<<<<< HEAD
 			ResultDTO<ProductDetailDTO> result2 = productService.selectProductDetailByCode(set.productCode,session);
+=======
+			ResultDTO<ProductDetailDTO> result2 = productService.selectProductDetailByCode(set.productCode);
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			ProductDetailDTO productDetail = result2.getData();
 			productCodes.add(set.productCode);
 			productDetails.add(productDetail);
@@ -186,6 +206,7 @@ public class ProductController {
 		session.setAttribute("products", productDetails);
 		return "right";
 	}
+<<<<<<< HEAD
 	
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/getCodes")
@@ -199,4 +220,6 @@ public class ProductController {
 		model.addAttribute("productCodes", json);
 		return model;
 	}
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 }

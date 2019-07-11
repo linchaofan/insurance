@@ -207,7 +207,11 @@
                                 <div class="item-row">
                                     <div class="col col-1">
                                         <div class="g-pic">
+<<<<<<< HEAD
                                             <img src="${productDetail.imgpath}" width="40" height="40" />
+=======
+                                            <img src="${product.imgpath}" width="40" height="40" />
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
                                         </div>
                                         <div class="g-info">
                                         <a href="productDetail.action?productCode=${productCode}">

@@ -41,11 +41,16 @@ String path = request.getContextPath();
 		           <a href="#" style="font-family: 微软雅黑;font-size: 15px;color:black">你好,${user.name}!</a>&nbsp;&nbsp;&nbsp;</c:if>
 		           <c:if test="${seller!=null }">
 		           <a href="#" style="font-family: 微软雅黑;font-size: 15px;color:black">你好,${seller.name}!</a>&nbsp;&nbsp;&nbsp;</c:if>
+<<<<<<< HEAD
 		           <c:if test="${user==null and seller==nnull }">
 		           <a href="#" style="font-family: 微软雅黑;font-size: 15px;color:black">你好,游客!</a>&nbsp;&nbsp;&nbsp;</c:if>
 		           <a href="#" style="font-family: 微软雅黑;font-size: 15px;color:blue" onclick="logout()">退出</a>&nbsp;&nbsp;
 		           <c:if test="${user!=null or seller!=null}">
 		           <a href="<%=path %>/changePwd.jsp" target="rightFrame" style="font-family: 微软雅黑;font-size: 15px;color:blue">修改密码</a></c:if>
+=======
+		           <a href="#" style="font-family: 微软雅黑;font-size: 15px;color:blue" onclick="logout()">退出</a>&nbsp;&nbsp;
+		           <a href="<%=path %>/changePwd.jsp" target="rightFrame" style="font-family: 微软雅黑;font-size: 15px;color:blue">修改密码</a>
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		      </div>
 		      <ul id="main-nav">
 		      <c:if test="${user!=null }">
@@ -59,6 +64,7 @@ String path = request.getContextPath();
 			          </ul>
 			       </li>
 			       </c:if>
+<<<<<<< HEAD
 			       <c:if test="${user==null and seller==null }">
 			       <li><a href="#" class="nav-top-item" style="font-family: 微软雅黑;font-size: 18px;color:black;">个人中心</a>
 			          <ul>
@@ -70,6 +76,8 @@ String path = request.getContextPath();
 			          </ul>
 			       </li>
 			       </c:if>
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			       <c:if test="${seller!=null }">
 			       <li><a href="#" class="nav-top-item" style="font-family: 微软雅黑;font-size: 18px;color:black;">管理中心</a>
 			          <ul>
@@ -82,6 +90,7 @@ String path = request.getContextPath();
 			       </li>
 			       </c:if>
 			       <li></li>
+<<<<<<< HEAD
 			       <c:if test="${user!=null }">
 			       <li><a href="#" class="nav-top-item" style="font-family: 微软雅黑;font-size: 23px;color:green;">医疗保险</a>
 			          <ul>
@@ -105,6 +114,8 @@ String path = request.getContextPath();
 			       </li>
 			       </c:if>
 			       <c:if test="${user==null and seller==null }">
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			       <li><a href="#" class="nav-top-item" style="font-family: 微软雅黑;font-size: 23px;color:green;">医疗保险</a>
 			          <ul>
 			            <li><a href="getProduct.action?typeCode=yiliao"  target="rightFrame"style="font-family: 微软雅黑;font-size: 13px;">医疗保险</a></li>
@@ -125,7 +136,10 @@ String path = request.getContextPath();
 			            <li><a href="getProduct.action?typeCode=lvyou"  target="rightFrame"style="font-family: 微软雅黑;font-size: 13px;">旅游保险</a></li>
 			          </ul>
 			       </li>
+<<<<<<< HEAD
 			       </c:if>
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 	          </ul>    
 	    </div>
     </div>

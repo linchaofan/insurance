@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录页面</title>
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<<<<<<< HEAD
 <script type="text/javascript">
 function(){
 if (window != top){
@@ -14,6 +15,8 @@ top.location.href = location.href;
 }
 }
 </script>
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 </head>
 <body>
 	<div id="app">
@@ -24,7 +27,11 @@ top.location.href = location.href;
 					<span @click="cur=1" :class="{active:cur==1}">承保方登录</span>
 				</div>
 				<div class="login_content">
+<<<<<<< HEAD
 				<form action="reLogin.action" method="post">
+=======
+				<form action="userLogin.action" method="post">
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 					<div v-show="cur==0" class="Cbody_item">
 						<div class="form_item"><input type="text" name="phone" placeholder="手机号码"></div>
 						<div class="form_item"><input type="password" name="pwd" placeholder="密码"></div>
@@ -74,4 +81,8 @@ top.location.href = location.href;
                 cur:0 //默认选中第一个tab
             }
         });    
+<<<<<<< HEAD
 </script>
+=======
+</script>
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87

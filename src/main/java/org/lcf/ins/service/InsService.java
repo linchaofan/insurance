@@ -63,11 +63,17 @@ public class InsService {
 	InsuredService insuredService;
 
 	// 获取方案价格
+<<<<<<< HEAD
 	@SuppressWarnings("unchecked")
 	public ResultDTO<String> getSchemePrice(String code, String age, String hasSocial, String coverage, String deadLine)
 			throws JsonParseException, JsonMappingException, IOException {
 		ResultDTO<String> result = ResultDTO.newSuccess();
 		String price;
+=======
+	public Long getSchemePrice(String code, String age, String hasSocial, String coverage, String deadLine)
+			throws JsonParseException, JsonMappingException, IOException {
+		Long price;
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		String productCode = null;
 		String insuredAge = null;
 		String social = null;
@@ -79,6 +85,7 @@ public class InsService {
 		} else {
 			productCode = "off";
 		}
+<<<<<<< HEAD
 		ProductSchemeExample example = new ProductSchemeExample();
 		ProductSchemeExample.Criteria criteria = example.createCriteria();
 		criteria.andProductCodeEqualTo(productCode);
@@ -93,6 +100,10 @@ public class InsService {
 				result = ResultDTO.newFail("被保人年龄不符合");
 				return result;
 			}
+=======
+		if (age != null) {
+			insuredAge = mapper.readValue(age, String.class);
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		} else {
 			insuredAge = "off";
 		}
@@ -101,6 +112,7 @@ public class InsService {
 		} else {
 			social = "off";
 		}
+<<<<<<< HEAD
 		cov = mapper.readValue(coverage, String.class);
 		if (coverage == null) {
 			cov = "off";
@@ -109,6 +121,22 @@ public class InsService {
 		if (dead == null) {
 			dead = "off";
 		} 
+=======
+		if (coverage != null) {
+			cov = mapper.readValue(coverage, String.class);
+		} else {
+			cov = "off";
+		}
+		if (deadLine != null) {
+			dead = mapper.readValue(deadLine, String.class);
+		} else {
+			dead = "off";
+		}
+		ProductSchemeExample example = new ProductSchemeExample();
+		ProductSchemeExample.Criteria criteria = example.createCriteria();
+		criteria.andProductCodeEqualTo(productCode);
+		List<ProductScheme> list = productSchemeMapper.selectByExample(example);
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		for (ProductScheme scheme : list) {
 			int length = scheme.getAgeRange().length();
 			int minAge = Integer.parseInt(scheme.getAgeRange().substring(length - 2, length)) - 10;
@@ -116,12 +144,19 @@ public class InsService {
 			if (Integer.parseInt(insuredAge) > minAge && Integer.parseInt(insuredAge) <= maxAge
 					&& social.equals(scheme.getHasSocial()) && cov.equals(scheme.getCoverage())
 					&& dead.equals(scheme.getDeadline())) {
+<<<<<<< HEAD
 				price = scheme.getPrice().toString();
 				result.setData(price);
 				return result;
 			}
 		}
 		result = ResultDTO.newFail("获取报价失败");
+=======
+				price = scheme.getPrice();
+				return price;
+			}
+		}
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		return null;
 	}
 
@@ -184,14 +219,24 @@ public class InsService {
 		List<User> users = userMapper.selectByExample(userExample);
 		if (users.size() == 0) {
 			order.setCheckStatus(3);
+<<<<<<< HEAD
 			return result = ResultDTO.newFail("核保失败，并非您本人投保");
+=======
+			result = ResultDTO.newFail("核保失败，投保人信息不匹配");
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		} else {
 			if (!(insOrder.getHolderName().equals(users.get(0).getName()))
 					|| !(insOrder.getHolderNumberId().equals(users.get(0).getNumberId()))) {
 				order.setCheckStatus(3);
 				result = ResultDTO.newFail("核保失败，投保人信息不匹配");
+<<<<<<< HEAD
 			}
 			order.setHolderId(users.get(0).getId());
+=======
+			} else {
+				order.setHolderId(users.get(0).getId());
+			}
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		}
 		ProductExample productExample = new ProductExample();
 		ProductExample.Criteria criteria2 = productExample.createCriteria();
@@ -273,11 +318,15 @@ public class InsService {
 		order.setCheckStatus(5);
 		order.setPolicyNo(policyNo);
 		order.setBeginDate(df1.parse(beginDate.toString()));
+<<<<<<< HEAD
 		if(endDate!=null){
 			order.setEndDate(df1.parse(endDate.toString()));
 		} else {
 			order.setEndDate(null);
 		}
+=======
+		order.setEndDate(df1.parse(endDate.toString()));
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
 		payMapper.updateByPrimaryKeySelective(pay);
 		orderInfoMapper.updateByPrimaryKeySelective(order);
@@ -369,9 +418,12 @@ public class InsService {
 			endDate = df.format(c.getTime());
 			return endDate;
 		}
+<<<<<<< HEAD
 		if(deadLine.equals("off")) {
 			return null;
 		}
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
 		return null;
 	}

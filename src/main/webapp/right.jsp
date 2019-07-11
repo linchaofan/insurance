@@ -38,10 +38,15 @@
     <ul>
     <c:forEach var="product" items="${products}" varStatus="status">
         <li>
+<<<<<<< HEAD
         	<c:forEach var="productCode" items="${productCodes}" varStatus="codeStatus"> 
         	<c:if test="${codeStatus.count == status.count}">
         	<a href="productDetail.action?productCode=${productCode}" class="goods-li-a" target="rightFrame">
         	<img class="item-img" src="${product.imgpath}">
+=======
+            <a href="productDetail.action?productCode=${productCodes[status.count]}" class="goods-li-a" target="rightFrame">
+                <img class="item-img" src="${product.imgpath}">
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
                 <div class="item-text">
                     <strong>${product.name}</strong>
                     <p>${product.title}<br>${product.shortTitle}</p>
@@ -49,8 +54,11 @@
                 </div>
                 <i class="i-p-hot"></i>
             </a>
+<<<<<<< HEAD
         	</c:if>
         	</c:forEach>          
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
         </li>
     </c:forEach> 
     </ul>
@@ -81,6 +89,7 @@
 </div>
 </div>
 </c:if>
+<<<<<<< HEAD
 <script type="text/javascript">
 /* var list = []
 $(document).ready(function(){
@@ -114,6 +123,9 @@ function myTest(item){
 	window.location.href= url
 } */
 
+=======
+<script>
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 function goSearch(){
 	var productName = $("#productName").val();
 	var index1 = document.getElementById("type").selectedIndex;
@@ -131,8 +143,11 @@ function goSearch(){
 	        }
 	});
 	}
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 </script>
 </body>
 </html>

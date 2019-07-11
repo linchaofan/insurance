@@ -141,6 +141,7 @@
 getPrice = function (code){
 	var age = $("#age").val();
 	var hasSocial = $("input[name='hasSocial']:checked").val();
+<<<<<<< HEAD
 	if(document.getElementById("coverage")){
 		var index1 = document.getElementById("coverage").selectedIndex;
 		var coverage = document.getElementById("coverage").options[index1].value;
@@ -153,6 +154,12 @@ getPrice = function (code){
 	} else {
 		var deadLine = null;
 	}
+=======
+	var index1 = document.getElementById("coverage").selectedIndex;
+	var coverage = document.getElementById("coverage").options[index1].value;
+	var index2 = document.getElementById("deadLine").selectedIndex;
+	var deadLine = document.getElementById("deadLine").options[index2].value; 
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 	
 	$.ajax({
 		async: false,
@@ -160,6 +167,7 @@ getPrice = function (code){
         type: "post",
         data:{"code":JSON.stringify(code),"age":JSON.stringify(age),"hasSocial":JSON.stringify(hasSocial),"coverage":JSON.stringify(coverage),"deadLine":JSON.stringify(deadLine)},
         success: function (msg) {
+<<<<<<< HEAD
         	if(msg.status==99999){
         	alert(msg.message);
         	window.location.href= 'productDetail.action?productCode='+code
@@ -178,6 +186,14 @@ getPrice = function (code){
             		var val= msg.data;
                 	document.getElementById("price").value=val;
             	}
+=======
+        	val=eval(msg);
+        	document.getElementById("price").value=val;
+        },
+        error: function (msg) {
+        	val=eval(msg);
+        	document.getElementById("price").value=val;
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
         }
 	});
 };

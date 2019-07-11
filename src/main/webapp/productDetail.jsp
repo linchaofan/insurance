@@ -97,6 +97,7 @@
 	<div class="aui-text-list">
 		<div class="aui-flex">
 			<div class="aui-flex-box">
+<<<<<<< HEAD
 				<h4>保险金额</h4>
 			</div>
 			<div class="aui-text-right">
@@ -104,10 +105,17 @@
             	${var}元
             	<c:if test="${!vs.last}">,</c:if>                 
             </c:forEach>	
+=======
+				<h4>一般医疗保险金</h4>
+			</div>
+			<div class="aui-text-right">
+				<h5>100万</h5>
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			</div>
 		</div>
 		<div class="aui-flex">
 			<div class="aui-flex-box">
+<<<<<<< HEAD
 				<h4>保障期限</h4>
 			</div>
 			<div class="aui-text-right">
@@ -115,6 +123,12 @@
                 ${var}
                 <c:if test="${!vs.last}">,</c:if>
             </c:forEach>
+=======
+				<h4>恶性重大疾病医疗保险金</h4>
+			</div>
+			<div class="aui-text-right">
+				<h5>100万</h5>
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			</div>
 		</div>
 		<div class="aui-flex">
@@ -130,7 +144,11 @@
 				<h4>投保年龄</h4>
 			</div>
 			<div class="aui-text-right">
+<<<<<<< HEAD
 				<h5>${minAge}岁~${maxAge}岁</h5>
+=======
+				<h5>31天~65周岁</h5>
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			</div>
 		</div>
 		<div class="aui-flex">
@@ -155,7 +173,11 @@
 			</a></li>
 		</ul>
 		<div class="aui-million-text">
+<<<<<<< HEAD
 			<h2>百万保险，你准备好了吗？</h2>
+=======
+			<h2>百万医疗险，你准备好了吗？</h2>
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		</div>
 		<div class="tab-panel">
 			<div class="tab-panel-item tab-active">
@@ -183,7 +205,11 @@
 		</p>
 	</div>
 	</section>
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 	<script type="text/javascript">
 		$(document).ready(function(e) {
 			$(".aui-cho-box li").click(function() {

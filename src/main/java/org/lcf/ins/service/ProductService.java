@@ -12,7 +12,10 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
+<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
 import org.apache.commons.io.FilenameUtils;
 import org.lcf.ins.dao.ProductMapper;
@@ -98,7 +101,11 @@ public class ProductService {
 	
 	//根据标识码查询商品详情
 	@SuppressWarnings("unchecked")
+<<<<<<< HEAD
 	public ResultDTO<ProductDetailDTO> selectProductDetailByCode(String productCode,HttpSession session){
+=======
+	public ResultDTO<ProductDetailDTO> selectProductDetailByCode(String productCode){
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		ResultDTO<ProductDetailDTO> result = ResultDTO.newSuccess();
 		ProductExample example = new ProductExample();
 		ProductExample.Criteria criteria = example.createCriteria();
@@ -111,11 +118,14 @@ public class ProductService {
 		if(products.size()==0||productSchemes.size()==0){
 			return result = ResultDTO.newFail("获取商品详情失败");
 		}
+<<<<<<< HEAD
 		int length = productSchemes.get(productSchemes.size()-1).getAgeRange().length();
 		String minAge = productSchemes.get(0).getAgeRange().substring(0, 2);
 		String maxAge = productSchemes.get(productSchemes.size()-1).getAgeRange().substring(length - 2, length);
 		session.setAttribute("minAge", minAge);
 		session.setAttribute("maxAge", maxAge);
+=======
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		Set<String> sets1 = new HashSet<String>();
 		Set<String> sets2 = new HashSet<String>();
 		List<String> coverageList = new ArrayList<>();

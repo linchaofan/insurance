@@ -7,6 +7,10 @@
 <title>请登录</title>
 </head>
 <body>
+<<<<<<< HEAD
 Response.Write("<script>alert('请先登录用户！');window.parent.location='reLogin.jsp';</script>");
+=======
+Response.Write("<script>alert('请先登录用户！');location.href='reLogin.jsp';</script>");
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 </body>
 </html>

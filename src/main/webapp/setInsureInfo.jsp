@@ -194,6 +194,7 @@ $(function(){
 	//第二页的确定按钮
 	$("#btn_part2").click(function(){	
 	    $(".part2").hide();	
+<<<<<<< HEAD
 		var data = {} ;
 		data.holderName = $("#holderName").val();
 		data.holderPhone = $("#holderPhone").val();
@@ -324,6 +325,33 @@ $(function(){
 				        }
 		});		
 		return
+=======
+	var data = {} ;
+	data.holderName = $("#holderName").val();
+	data.holderPhone = $("#holderPhone").val();
+	data.holderNumberId = $("#holderNumberId").val();
+	data.insuredName = $("#insuredName").val();
+	data.insuredPhone = $("#insuredPhone").val();
+	data.insuredSex = $('input:radio[name="insuredSex"]:checked').val();
+	data.insuredBirth = $("#insuredBirth").val();
+	data.insuredNumberId = $("#insuredNumberId").val();
+	data.insuredEmail = $("#email").val();
+	data.insuredAddress = $("#address").val();
+	$.ajax({
+	                async: false,
+			        url: "checkOrder.action",
+			        type: "post",
+			        contentType : "application/json;charsetset=UTF-8",
+			        dataType:'json',
+			        data: JSON.stringify(data),
+			        success: function (msg) {
+			        	$(".part4").show();
+			        },
+			        error: function (msg) {
+			        	$(".part4").show();
+			        }
+	});		
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 	});		
 });
 function showoutc(){$(".m-sPopBg,.m-sPopCon").show();}

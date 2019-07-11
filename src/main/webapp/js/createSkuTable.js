@@ -55,7 +55,18 @@ $(function(){
 		var skuList = [];
 		var SKUTableDom = "";//sku表格数据
 		//开始创建行
+<<<<<<< HEAD
 		if(b){//必选的SKU属性已经都选中了		
+=======
+		if(b){//必选的SKU属性已经都选中了
+			
+//			//调整顺序(少的在前面,多的在后面)
+//			skuTypeArr.sort(function(skuType1,skuType2){
+//				return (skuType1.skuValueLen - skuType2.skuValueLen)
+//			});
+//			
+			
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			var skuPriceArr =  [];
 			SKUTableDom += "<table class='skuTable'><tr>";
 			//创建表头
@@ -92,18 +103,40 @@ $(function(){
 					}
 				}
 				skuList.push(propvalnameArr);
+<<<<<<< HEAD
 				
 				var propvalids = propvalidArr.toString()
 				var alreadySetSkuPrice = "";//已经设置的SKU价格
+=======
+//				//进行排序(主键小的在前,大的在后),注意:适用于数值类型的主键
+//				propvalidArr.sort(function(provids1,propvids2){
+//					return (provids1 - propvids2)
+//				});
+				
+				var propvalids = propvalidArr.toString()
+				var alreadySetSkuPrice = "";//已经设置的SKU价格
+//				var alreadySetSkuStock = "";//已经设置的SKU库存
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 				//赋值
 				if(alreadySetSkuVals){
 					var currGroupSkuVal = alreadySetSkuVals[propvalids];//当前这组SKU值
 					if(currGroupSkuVal){
 						alreadySetSkuPrice = currGroupSkuVal.skuPrice;
+<<<<<<< HEAD
 						skuPriceArr.push(alreadySetSkuPrice);
 					}
 				}
 				SKUTableDom += '<tr propvalids=\''+propvalids+'\' propids=\''+propIdArr.toString()+'\' propvalnames=\''+propvalnameArr.join(";")+'\'  propnames=\''+propNameArr.join(";")+'\' class="sku_table_tr">'+currRowDoms+'<td><input id="price" name="price" type="text" class="sku_table_tr" /></td>';
+=======
+//						alreadySetSkuStock = currGroupSkuVal.skuStock
+						skuPriceArr.push(alreadySetSkuPrice);
+					}
+				}
+				
+				//console.log(propvalids);
+				SKUTableDom += '<tr propvalids=\''+propvalids+'\' propids=\''+propIdArr.toString()+'\' propvalnames=\''+propvalnameArr.join(";")+'\'  propnames=\''+propNameArr.join(";")+'\' class="sku_table_tr">'+currRowDoms+'<td><input id="price" name="price" type="text" class="sku_table_tr" /></td>';
+
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			}
 			SKUTableDom += "</table>";
 		}

@@ -67,7 +67,11 @@
 			<li><label><input type="checkbox" class="sku_value" propvalid='43' value="off" />无需</label></li>
 		</ul>
 		<div class="clear"></div>
+<<<<<<< HEAD
 		<%--<input type="button" class="cloneSku" value="添加自定义sku属性">--%>
+=======
+		<input type="button" class="cloneSku" value="添加自定义sku属性">
+>>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
 		<!--sku模板,用于克隆,生成自定义sku-->
 		<div id="skuCloneModel" style="display: none;">
