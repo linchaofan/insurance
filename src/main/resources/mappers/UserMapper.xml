@@ -31,12 +31,7 @@
 								</when>
 								<when test="criterion.listValue">
 									and ${criterion.condition}
-<<<<<<< HEAD
 									<foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-=======
-									<foreach close=")" collection="criterion.value" item="listItem"
-										open="(" separator=",">
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 										#{listItem}
 									</foreach>
 								</when>
@@ -49,12 +44,7 @@
 	</sql>
 	<sql id="Update_By_Example_Where_Clause">
 		<where>
-<<<<<<< HEAD
 			<foreach collection="example.oredCriteria" item="criteria" separator="or">
-=======
-			<foreach collection="example.oredCriteria" item="criteria"
-				separator="or">
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 				<if test="criteria.valid">
 					<trim prefix="(" prefixOverrides="and" suffix=")">
 						<foreach collection="criteria.criteria" item="criterion">
@@ -71,12 +61,7 @@
 								</when>
 								<when test="criterion.listValue">
 									and ${criterion.condition}
-<<<<<<< HEAD
 									<foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-=======
-									<foreach close=")" collection="criterion.value" item="listItem"
-										open="(" separator=",">
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 										#{listItem}
 									</foreach>
 								</when>
@@ -90,12 +75,7 @@
 	<sql id="Base_Column_List">
 		id, name, number_id, phone, gender, address, email, password, birthday
 	</sql>
-<<<<<<< HEAD
 	<select id="selectByExample" parameterType="org.lcf.ins.entity.UserExample" resultMap="BaseResultMap">
-=======
-	<select id="selectByExample" parameterType="org.lcf.ins.entity.UserExample"
-		resultMap="BaseResultMap">
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		select
 		<if test="distinct">
 			distinct
@@ -110,12 +90,7 @@
 			order by ${orderByClause}
 		</if>
 	</select>
-<<<<<<< HEAD
 	<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-=======
-	<select id="selectByPrimaryKey" parameterType="java.lang.Integer"
-		resultMap="BaseResultMap">
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		select
 		<include refid="Base_Column_List" />
 		from user
@@ -207,12 +182,7 @@
 			</if>
 		</trim>
 	</insert>
-<<<<<<< HEAD
 	<select id="countByExample" parameterType="org.lcf.ins.entity.UserExample" resultType="java.lang.Long">
-=======
-	<select id="countByExample" parameterType="org.lcf.ins.entity.UserExample"
-		resultType="java.lang.Long">
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		select count(*) from user
 		<if test="_parameter != null">
 			<include refid="Example_Where_Clause" />

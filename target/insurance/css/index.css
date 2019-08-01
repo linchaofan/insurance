@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+body {
+	background-color:gray;
+	background-size:200px 100px;
+    background-position-x:50%;
+}

@@ -15,19 +15,11 @@ public interface ProductMapper {
     int insert(Product record);
 
     int insertSelective(Product record);
-<<<<<<< HEAD
-=======
-    
-    List<Product> selectByNameAndType(@Param("name") String name,@Param("typeCode") String typeCode);
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
     List<Product> selectByExample(ProductExample example);
 
     Product selectByPrimaryKey(Integer id);
-<<<<<<< HEAD
     List<Product> selectByNameAndType(@Param("name") String name, @Param("typeCode") String typeCode);
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
     int updateByExampleSelective(@Param("record") Product record, @Param("example") ProductExample example);
 

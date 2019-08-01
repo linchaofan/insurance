@@ -8,10 +8,7 @@ import java.util.List;
 
 import org.lcf.ins.dao.InsuredMapper;
 import org.lcf.ins.dao.OrderInfoMapper;
-<<<<<<< HEAD
 import org.lcf.ins.dao.ProductMapper;
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 import org.lcf.ins.dao.SellerMapper;
 import org.lcf.ins.dao.UserMapper;
 import org.lcf.ins.dto.CheckOrderDTO;
@@ -25,10 +22,7 @@ import org.lcf.ins.entity.OrderInfo;
 import org.lcf.ins.entity.OrderInfoExample;
 import org.lcf.ins.entity.Product;
 import org.lcf.ins.entity.ProductExample;
-<<<<<<< HEAD
 import org.lcf.ins.entity.Seller;
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 import org.lcf.ins.entity.User;
 import org.lcf.ins.enums.ErrorEnum;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,11 +41,8 @@ public class OrderService {
 	InsuredService insuredService;
 	@Autowired 
 	SellerMapper sellerMapper;
-<<<<<<< HEAD
 	@Autowired
 	ProductMapper productMapper;
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
 	
 	//根据ID查询订单
@@ -161,7 +152,6 @@ public class OrderService {
 		for(OrderInfo order : orders){
 			if(order.getCheckStatus()==5){
 			PolicyDTO policy = new PolicyDTO();
-<<<<<<< HEAD
 			Product product = productMapper.selectByPrimaryKey(order.getProductId());
 			Seller seller = sellerMapper.selectByPrimaryKey(product.getSellerId());
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -173,14 +163,6 @@ public class OrderService {
 			} else {
 				policy.setEndDate(null);
 			}
-=======
-//			Seller seller = sellerMapper.selectByPrimaryKey(order.getSellerId());
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-			policy.setOrderId(order.getId());
-			policy.setProductName(order.getProductName());
-//			policy.setCompanyName(seller.getName());
-			policy.setEndDate(sdf.format(order.getEndDate()));
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			list.add(policy);
 			}
 		}
@@ -194,21 +176,13 @@ public class OrderService {
 		ResultDTO<PolicyDetailDTO> result = ResultDTO.newSuccess();
 		PolicyDetailDTO policyDetail = new PolicyDetailDTO();
 		OrderInfo order = orderInfoMapper.selectByPrimaryKey(orderId);
-<<<<<<< HEAD
 		Product product = productMapper.selectByPrimaryKey(order.getProductId());
 		Seller seller = sellerMapper.selectByPrimaryKey(product.getSellerId());
-=======
-//		Seller seller = sellerMapper.selectByPrimaryKey(order.getSellerId());
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		User holder = userMapper.selectByPrimaryKey(order.getHolderId());
 		ResultDTO<Insured> result1 = insuredService.selectInsuredByOrderId(orderId);
 		Insured insured = result1.getData();
 		policyDetail.setProductName(order.getProductName());
-<<<<<<< HEAD
 		policyDetail.setCompanyName(seller.getName());
-=======
-//		policyDetail.setCompanyName(seller.getName());
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		policyDetail.setHolderName(holder.getName());
 		policyDetail.setHolderNumberId(holder.getNumberId());
 		policyDetail.setInsuredName(insured.getName());
@@ -217,15 +191,11 @@ public class OrderService {
 		policyDetail.setTotalAmount(order.getTotalAmount());
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		policyDetail.setBeginDate(sdf.format(order.getBeginDate()));
-<<<<<<< HEAD
 		if(order.getEndDate()!=null){
 			policyDetail.setEndDate(sdf.format(order.getEndDate()));
 		} else {
 			policyDetail.setEndDate(null);
 		}
-=======
-		policyDetail.setEndDate(sdf.format(order.getEndDate()));
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		result.setData(policyDetail);
 		return result;
 	}

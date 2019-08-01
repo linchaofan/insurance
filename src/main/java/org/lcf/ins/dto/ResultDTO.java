@@ -3,15 +3,9 @@ package org.lcf.ins.dto;
 import org.lcf.ins.enums.ErrorEnum;
 
 public class ResultDTO<T> {
-<<<<<<< HEAD
 	/**成功状态码*/
     public static final int SUCCESS_CODE = ErrorEnum.success.getErrorCode();
     /**失败状态码*/
-=======
-	/**�ɹ�״̬��*/
-    public static final int SUCCESS_CODE = ErrorEnum.success.getErrorCode();
-    /**ʧ��״̬��*/
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
     public static final int FAIL_CODE = ErrorEnum.failure.getErrorCode();
     
 	private int status;

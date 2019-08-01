@@ -40,10 +40,7 @@ public class OrderController {
 	//订单列表
 	@RequestMapping(value="/orderList")
 	public String orderList(Model model,Integer holderId,HttpSession session){
-<<<<<<< HEAD
 		session.removeAttribute("errorMsg");
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		ResultDTO<List<OrderInfo>> result = orderService.selectOrderByHolderIdAndStatus(holderId);
 		if(result.getStatus()!=ErrorEnum.success.getErrorCode()){
 			model.addAttribute("errorMsg", result.getMessage());
@@ -57,10 +54,7 @@ public class OrderController {
 	//承保方订单列表
 	@RequestMapping(value="/sellerOrderList")
 	public String sellerOrderList(Model model,Integer sellerId,HttpSession session){
-<<<<<<< HEAD
 		session.removeAttribute("errorMsg");
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		ResultDTO<List<OrderInfo>> result = sellerService.selectOrderBySellerId(sellerId);
 		if(result.getStatus()!=ErrorEnum.success.getErrorCode()){
 			model.addAttribute("errorMsg", result.getMessage());
@@ -83,10 +77,7 @@ public class OrderController {
 	//用户核保记录
 	@RequestMapping(value="/myCheck")
 	public String myCheck(Model model,Integer holderId,HttpSession session){
-<<<<<<< HEAD
 		session.removeAttribute("errorMsg");
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		ResultDTO<List<CheckOrderDTO>> result = checkOrderService.myCheckOrder(holderId);
 		List<CheckOrderDTO> checkOrders = result.getData();
 		if(result.getStatus()!=ErrorEnum.success.getErrorCode()){
@@ -140,10 +131,7 @@ public class OrderController {
 	//保单查询
 	@RequestMapping(value="/myPolicy")
 	public String myPolicy(Model model,Integer holderId,HttpSession session){
-<<<<<<< HEAD
 		session.removeAttribute("errorMsg");
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		ResultDTO<List<OrderInfo>> result = orderService.selectOrderByHolderId(holderId);
 		if(result.getStatus()!=ErrorEnum.success.getErrorCode()){
 			model.addAttribute("errorMsg", result.getMessage());

@@ -24,7 +24,6 @@ public class UserController {
 	@Autowired
 	SellerService sellerService;
 	
-<<<<<<< HEAD
 	//游客登录
 	@RequestMapping(value="/visitorLogin")
 	public String visitorLogin(Model model,HttpSession session){
@@ -33,8 +32,6 @@ public class UserController {
 		return "index";
 	}
 	
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 	@RequestMapping(value="/userLogin")
 	public String login(Model model,String phone,String pwd,HttpSession httpSession){
 		User user = userService.loginValidate(phone, pwd);
@@ -64,11 +61,7 @@ public class UserController {
 		User user = userService.loginValidate(phone, pwd);
 		if(user!=null){
 			httpSession.setAttribute("user", user);
-<<<<<<< HEAD
 			return "/index";
-=======
-			return "/right";
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		}
 		model.addAttribute("errorMsg","登录失败，账号或者密码错误！");
 		return "/relogin";
@@ -80,11 +73,7 @@ public class UserController {
 		ResultDTO result = userService.insertUser(userInfo);
 		if(result.getStatus()!=ErrorEnum.success.getErrorCode()){
 			model.addAttribute("errorMsg",result.getMessage());
-<<<<<<< HEAD
 			return "/right";
-=======
-			return "/register";
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 		}
 		return "/successRe";
 	}

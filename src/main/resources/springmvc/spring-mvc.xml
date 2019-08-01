@@ -40,11 +40,8 @@
 			<mvc:exclude-mapping path="/**/*.gif" />
 			<mvc:exclude-mapping path="/**/*.jpg" />
 			<mvc:exclude-mapping path="/**/*.jpeg" />
-<<<<<<< HEAD
 			<mvc:exclude-mapping path="/visitorLogin" />
 			<mvc:exclude-mapping path="/visitorLogin.action" />
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			<mvc:exclude-mapping path="/loginTip" />
 			<mvc:exclude-mapping path="/reLogin" />
 			<mvc:exclude-mapping path="/userLogin" />
@@ -54,13 +51,10 @@
 			<mvc:exclude-mapping path="/userLogin.action" />
 			<mvc:exclude-mapping path="/register.action" />
 			<mvc:exclude-mapping path="/sellerLogin.action" />
-<<<<<<< HEAD
 			<mvc:exclude-mapping path="/getProduct" />
 			<mvc:exclude-mapping path="/getProduct.action" />
 			<mvc:exclude-mapping path="/search" />
 			<mvc:exclude-mapping path="/search.action" />
-=======
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 			<bean class="org.lcf.ins.interceptor.LoginInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
@@ -68,11 +62,7 @@
 	<!-- 对模型视图添加前后缀 -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-<<<<<<< HEAD
 		p:prefix="" p:suffix=".jsp"/>
-=======
-		p:prefix="" p:suffix=".jsp" />
->>>>>>> b16026bdc3aa043d6527e5195e2b0b0220640a87
 
 	<!-- 定义文件上传解析器 -->
 	<bean id="multipartResolver"

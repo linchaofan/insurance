@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="insurance:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="786566aa-c7ef-4dad-a683-e301380c7720" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/controller/InsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/controller/InsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/dao/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/dao/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/dto/ResultDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/dto/ResultDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/service/InsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/service/InsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lcf/ins/service/RecommendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lcf/ins/service/RecommendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProductScheme.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProductScheme.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/createSkuTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/createSkuTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/getSchemePrice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/getSchemePrice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginTip.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginTip.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/payOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/payOrder.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/productDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/productDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/productList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/productList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/right.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/right.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/setInsureInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/setInsureInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/controller/InsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/controller/InsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/InsuredMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/InsuredMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/OrderInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/OrderInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/PayMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/PayMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/ProductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/ProductSchemeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/ProductSchemeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/SellerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/SellerMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/AddProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/AddProductDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/ChangePwdDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/ChangePwdDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/CheckOrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/CheckOrderDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/InsureOrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/InsureOrderDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/OrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/OrderDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/OrderDetailDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/OrderDetailDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/PolicyDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/PolicyDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/PolicyDetailDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/PolicyDetailDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/ProductDetailDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/ProductDetailDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/ProductInfoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/ProductInfoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/ResultDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/ResultDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/SkuProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/SkuProductDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/UserInfoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/UserInfoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/UserSetDTO$Set.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/UserSetDTO$Set.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/UserSetDTO$User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/UserSetDTO$User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/UserSetDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/dto/UserSetDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/Insured.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/Insured.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/InsuredExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/InsuredExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/InsuredExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/InsuredExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/InsuredExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/InsuredExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/InsuredExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/InsuredExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfoExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfoExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfoExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfoExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfoExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfoExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfoExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/OrderInfoExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/Pay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/Pay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/PayExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/PayExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/PayExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/PayExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/PayExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/PayExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/PayExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/PayExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductScheme.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductScheme.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductSchemeExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductSchemeExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductSchemeExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductSchemeExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductSchemeExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductSchemeExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductSchemeExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/ProductSchemeExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/Seller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/Seller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/SellerExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/SellerExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/SellerExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/SellerExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/SellerExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/SellerExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/SellerExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/SellerExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/UserExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/UserExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/UserExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/UserExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/UserExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/UserExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/UserExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/entity/UserExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/enums/BaseErrorEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/enums/BaseErrorEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/enums/BaseIntegerEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/enums/BaseIntegerEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/enums/ErrorEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/enums/ErrorEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/CheckOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/CheckOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/DeleteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/DeleteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/IdentityHashMapOperate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/IdentityHashMapOperate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/InsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/InsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/InsuredService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/InsuredService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/ProductService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/ProductService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/RecommendService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/RecommendService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/SearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/SearchService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/SellerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/SellerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/ins/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lcf/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lcf/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springmvc/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/org.lcf/insurance/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/org.lcf/insurance/pom.xml" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="insurance" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/org/lcf/ins/service/ProductService.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="insurance Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="insurance Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="insurance Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/insurance.iml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="143" />
+    <option name="y" value="47" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <autoscrollFromSource Scope="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="C:/Program Files/Apache Software Foundation/Tomcat 7.0/lib/servlet-api.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.75" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.8.0_102\jre">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/insurance_war/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="insurance:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/insurance_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_insurance" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55127" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="insurance:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="786566aa-c7ef-4dad-a683-e301380c7720" name="Default Changelist" comment="" />
+      <created>1562837527312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562837527312</updated>
+      <workItem from="1562837529927" duration="3113000" />
+      <workItem from="1562892202722" duration="1919000" />
+      <workItem from="1562894150414" duration="3195000" />
+      <workItem from="1563151064230" duration="3265000" />
+      <workItem from="1563259635023" duration="614000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12106000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="115" y="38" width="1400" height="784" extended-state="0" />
+    <layout>
+      <window_info id="Structure" order="0" sideWeight="0.39570552" side_tool="true" weight="0.23994039" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5034325" side_tool="true" weight="0.24962743" />
+      <window_info id="Web" order="6" sideWeight="0.5034325" side_tool="true" weight="0.24962743" />
+      <window_info active="true" content_ui="combo" x="648" y="82" width="322" height="652" id="Project" order="7" sideWeight="0.6042945" visible="true" weight="0.24366617" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31748468" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297546" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297546" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3297546" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3297546" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3297546" />
+      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3297546" />
+      <window_info anchor="bottom" id="Application Servers" order="15" weight="0.3297546" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962743" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.25111774" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lcf/test.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2039">
+          <caret line="181" column="37" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lcf/ins/controller/InsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="66" column="38" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lcf/ins/service/InsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4028">
+          <caret line="252" column="74" selection-start-line="252" selection-start-column="74" selection-end-line="252" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lcf/ins/service/InsuredService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lcf/ins/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="109" column="45" selection-start-line="109" selection-start-column="45" selection-end-line="109" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lcf/ins/dto/ResultDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+          <folding>
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>insurance</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>servlet-api</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

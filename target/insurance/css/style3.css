@@ -1,0 +1,383 @@
+/*
+<!--
+
+* 17素材vip建站专区模块代码
+* 详尽信息请看官网：http://www.17sucai.com/pins/vip
+*
+* Copyright , 温州易站网络科技有限公司版权所有
+*
+* 请尊重原创，未经允许请勿转载。
+* 在保留版权的前提下可应用于个人或商业用途
+
+-->
+*/
+html,body {
+    color: #333;
+    margin: 0;
+    height: 100%;
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a, label, button, input, select {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+    border: 0;
+}
+
+body {
+    margin: 0;
+    background-image: url("../images/body.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #08acee;
+}
+
+button {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+input {
+    outline: none;
+    background: transparent;
+    border: none;
+    outline: medium;
+}
+
+*:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+::selection {
+    background: transparent;
+}
+
+::-moz-selection {
+    background: transparent;
+}
+
+button,input,optgroup,select,textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.divHeight {
+    width: 100%;
+    height: 10px;
+    background: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.r-line {
+    position: relative;
+}
+
+.r-line:after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-right: 1px solid #D9D9D9;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.b-line {
+    position: relative;
+}
+
+.b-line:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #e2e2e2;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+/* 必要样式 */
+.aui-register-popup {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endColorstr=#4C000000);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.4);
+    margin: 0;
+    overflow-y: scroll;
+}
+
+.aui-register-box {
+    position: relative;
+    width: 476px;
+    padding-bottom: 10px;
+    margin-top: 44px;
+    margin-left: 50%;
+    left: -238px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 2px 6px 2px rgba(0,0,0,.24);
+}
+
+.aui-register-link {
+    position: absolute;
+    width: 100%;
+    top: -28px;
+}
+
+.aui-register-link a {
+    color: #f6f6f6;
+    font: 12px/1.2 "Hiragino Sans GB","Microsoft YaHei","微软雅黑",arial,Tahoma,SimSun,sans-serif;
+    text-decoration: none;
+}
+
+.aui-register-logo {
+    width: 105px;
+    margin: 0 auto;
+    padding-top: 42px;
+    padding-bottom: 20px;
+}
+
+.aui-register-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+.aui-register-form-item {
+    width: 350px;
+    margin: 20px auto;
+    position: relative;
+    text-align: justify;
+}
+
+.aui-register-form-item input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 2px solid #ebebeb;
+    text-indent: 15px;
+    font-size: 14px;
+    line-height: 42px;
+    *margin-left: -15px;
+    background: #fff;
+}
+
+.aui-register-form-item input:focus {
+    border: 2px solid #bbbaba;
+    background: #fff;
+}
+
+.aui-register-form-item input:active {
+    border: 2px solid #bbbaba;
+    background: #fff;
+}
+
+.aui-get-code {
+    position: absolute;
+    top: 8px;
+    *top: 11px;
+    right: 8px;
+    height: 26px;
+    color: #999;
+    font-size: 12px;
+    line-height: 26px;
+    background: #eee;
+    border-radius: 2px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.aui-register-tag {
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    top: 4px;
+    display: block;
+    float: left;
+}
+
+.clear {
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+    *display: none;
+}
+
+.protocol {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #999;
+}
+
+.protocol a {
+    color: #ff553e;
+    text-decoration: none;
+}
+
+
+
+.aui-register-bottom {
+    position: absolute;
+    width: 76%;
+    margin-left: 12%;
+    bottom: -46px;
+}
+
+.aui-register-bottom a {
+    color: #f6f6f6;
+    font: 12px/1.2 "Hiragino Sans GB","Microsoft YaHei","微软雅黑",arial,Tahoma,SimSun,sans-serif;
+    text-decoration: none;
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+.focus {
+    width: 350px;
+    text-align: left;
+    color: #ff552e;
+    font-size: 12px;
+    position: relative;
+    padding-left: 20px;
+    float: left;
+}
+
+.focus span {
+    height: 35px;
+    line-height: 35px;
+}
+
+.icon-tips {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEN0lEQVRYR82YXWwUZRSGn3e7ulD8bSUGxYi4QKzdof7UxhuCNwJiCdBuAiZNjJELe6mJ3qhcqIneqDHRGI3xhqAwbTH1B4MxwWiMksjP7raG0HBhgGAiJYgQqe0cs1u37S473f1mUTtXm+x53/PMmfm+c74Rc/zSHOejLkBL0wCpBzBbBLEmsCbM/gSNEMRGOHvkuPYzXk8RnAENYnR5m5BtROoErg8FMLuE+BpjkDH7RIO5X11hnQCty+tAfIC42zURZoa0G9guP3O0Vn1NgLZhxbUkrn4L9HitxuFxFmDsZGysV4NHz1fzqwpom1rvIh77HLijmpnT/8YQAWs1kDkxm25WQEu3roeYD8x3Sl5zsJ0msDXqz2XCJKGAtrH1Tq7SYdA1NeeLFGinmVB7WCUrAlrnLY3Maz4IWhEpp7PIfuac2rUvc6FcWhkw7b0DPOWY5zeC4CWk80gvAkuc9GY71JftqQpom1YuJ27DkN+EXa7xDvnDB/IK29h2A/GJEaRmFwcwT342O1NzWQWt2+tHbHY0Pis/2zRTY93eD4gOR5+v5GcfDgW0dEsS4sfcTIvRwWb5uT2FCqZX3grBCGies9cE92kgc7CoK6mgdaeeQ3rV2bRAZQbKA2bBepCWRvIheEV+7vkQwCiPJRpGuMqG5WenWulUBW196kYaNRopndmHSDuwIECx6zB7F2lRJK+CSIvlHzlZ+FU0sXRLG8QPuZvaiPzssrIF8hFii7vXPwpjlfoy35YCdqUeIaZ8z3W7jIuMXVqmwaOnpm6229uJ2OpmNDM62CI/t6sccBsxvRfJ1OwE0qfyM72F9VI3oD0jP/t6KWC39yTi/UiAk6ID8jOFfa9uwMCeVn/2jbJ3sDC5fDYnAG1iq/qGPi4F3OzdSwM/zQlAbLX87DelgPltZj5nkKoOsSE3ceUe8QS3Fcev0k6STn0PejBiFa8UYE5+JlVkKG91zyK99r8Cmr2svuwLlQHrGhZmrOIurwvZGqRt7jc7fo/84cMVASe3iNRupLS78TTg9Iad+gJpnYPXl/IzJfGXz4NpL396y49cjgMrp/jj4lLtHbk0BZj29gJrawYcJ6U9mdzM+Mojf3fr2yhW6AqO1wGMPFS+y68CHqpZX+vIX3jM65IJFsz/Dun+mhPUFWi/wAVP/vFz5Tbhx87O5TeRSBxCWlxX7mriye837eVnkdBFMtOvcIBqsH2I26vlifj/XxD0FCeXSh5Vu4alkwuhcR/QFhEiTHaSYLxT/cOzzqBVAQvvZP4gn2h+E+mJCKu7EuAuGO+VP1x1gq8JcHrbaEliDdsRj4FizhU1jiHbVhwEatE7AU6Bbmi9mQSPgjZg5DtGIjyZ/Q7aSxAMcCY34PrFNRJgyUJaTZyFLUsgngRLYizAGAWNYhOnGR360RWq6kZdS+n/q5i6K/hvg/4NPX2LOLSlU28AAAAASUVORK5CYII=');
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    display: block;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+
+
+.aui-register-form-item .aui-btn-reg {
+    width: 100%;
+    height: 42px;
+    outline: 0;
+    border: 0;
+    background: #ff552e;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+}
+
+
+
+.aui-register-form-item .aui-btn-reg:hover {
+    width: 100%;
+    height: 42px;
+    outline: 0;
+    border: 0;
+    background: #ff552e;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+}
+.aui-register-form-item .aui-btn-reg:focus {
+    width: 100%;
+    height: 42px;
+    outline: 0;
+    border: 0;
+    background: #ff552e;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+}
+
+.msg{
+    margin-left:-20px;
+    width: 350px;
+    text-align: left;
+    color: #ff552e;
+    font-size: 12px;
+    position: relative;
+    padding-left: 20px;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+}
