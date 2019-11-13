@@ -17,7 +17,7 @@
 		<!-- mybatis版本号 -->
 		<mybatis.version>3.2.1</mybatis.version>
 		<!-- json -->
-		<jackson.version>2.4.2</jackson.version>
+		<jackson.version>2.10.1</jackson.version>
 	</properties>
 
 	<dependencies>
